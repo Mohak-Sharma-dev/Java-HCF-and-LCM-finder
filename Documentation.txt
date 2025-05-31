@@ -1,0 +1,44 @@
+This is the documentation file for the project, divided into three sections:
+
+Prime number Generator:
+-Which functions are used.
+-Why were those functions used.
+-When  
+-What does this achieve/what is done differently/What were the different challenges and HOW were they addressed/overcame~
+
+This sections provides the documentation for The prime number generator,
+Which is essenciall for Finding HCF and LCM.
+
+Here's a summary of the functions/methods used (Appart form the basic beginner  stuff like setters/getters/ and constructors.):
+
+Overloaded functions(I'll explain later):
+
+1. arrayListGenerator(int lowerbound,int upperbound)
+2. arrayListGenerator(int upperbound)
+
+Non-Overloaded FUnctions:
+
+3. isPrime(int integertocheck, int primecheckedagainst, int forloopIteration)
+4. run()
+5. primenumberGenerator(ArrayList<Integer> listofIntegers)
+
+Before we begin, I want you to visualize how you would have generated a list of primes and write it down somewhere.
+
+It is important, if you're reading this, you just begun programming. But it is important we define your logic first then refine it.
+
+Jumping to solutions is fruitless (Saying this from personal experience).
+
+Now that your done that, let's move on to generating a normal array of integers. we do that by: 
+
+```
+
+
+
+
+
+
+
+
+
+
+HCF and LCM finder.
