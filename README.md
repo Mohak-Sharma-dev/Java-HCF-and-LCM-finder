@@ -1,137 +1,83 @@
-### Java HCF & LCM Finder ###
-**(Documentation)**
+# Java Prime Number Generator & HCF/LCM Finder #
 
-## Context/Background ##
-_(Skip this if you're here just to see how the code works)_
+## Key Features: ##
 
->Think about how we normally find HCFs and LCMs.
+### Prime Number Generator:
 
->Take two numbers, x and y. (I'm also not a fan of algebra, but bear with me here.)
+- Generate prime numbers upto certain digits.
 
->For these two numbers there must a least common multiple 'l' that is divisible by both.
+- Return number of Primes within a certain range.
 
->_ie. for 40 and 35 is 280, as 280/35 = 7 and 280/40 = 8_
+### HCF/LCM finder:
 
-> Similarly, there must be  Highest common factor 'h' , which can Is a divisor of both these numbers.
+- Find HCF of two numbers using integer arraylists.
 
->_For 40 and 35, HCF is 5_.
+- Find LCM of the same numbers using the concept:
 
->Another interesting thing to note, is that product of LCM and HCF is equal to the product of the two numbers, ie:
+> (num1)(num2) = p = (lcm)(hcf) 
 
-**(x)(y) = p = (l)(h)**
+Ie. product of two numbers is to the product of their lcm and hcf.
 
->Easy, Right? Using a simple example we could under stand how LCMs and HCFs work.
+## Installation:
 
->_(If you don't get it I would recommend to watch and practice some yourself)_
+If you want to run this locally, You will need:
 
->But what if we take bigger numbers? Let's say 467 and 399?
+- Terminal / Cmd
+- Java SE 8+
+- git
 
->_It becomes harder for bigger numbers, as they are more likely to have more combinations of Factors and multiples._
+** Step-by-Step Installation: **
 
->Even for a computer to do that, we need to define proper, foul-proof logic. So what is that logic?
+* Firstly, go to the search tab of the windows task bar and type in "Terminal" or "cmd".
 
->It's simple. First we need to check wether the numbers themselves are primes or not.
+* Type in ``` java --version ``` and then ```git --version``` to see if these aren't already installed.
 
->For that, we need a list of primes. And for that, we need to generate primes from scratch.
+* If a version of both of these is found, then congratulations!! We can move onto cloning the repo locally. If not, Let's install java and git first:
 
-## Prime Number Generator ##
+  1. Visit  ```https://www.oracle.com/java/technologies/downloads/``` and look for your operation system and architecture.
 
-This section describes how to generate a list of primes, without any limits.
+  2. Secondly, Goto ```https://git-scm.com/downloads``` to install git.
 
-But **First**, An Honest Word:
+  3. For a more In-depth explaination, Simply look up "How to install java" or "How to install and configure git" and watch what suits you best.
+  
 
->Before we begin, I want you to visualize how you would have generated a list of primes and write it down somewhere. It is important, if you're reading this, you just begun programming. But it is important we define your logic first then refine it.Jumping to solutions is fruitless (Saying this from personal experience).
-
-This sections provides the documentation for The prime number generator,
-Which is essenciall for Finding HCF and LCM.
-
-# Here are the Methods Described below: #
-_(Apart from the basic setters/getter and constructors I'm assuming you already know)_
-
-
-**Overloaded functions**(I'll explain later):
+* After that's done, open git bash and navigate to the directory(or folder) you to store this code in.
 
 ```
-1. arrayListGenerator(int lowerbound,int upperbound)
-2. arrayListGenerator(int upperbound)
-
+cd C:/path/to/your/folder
 ```
 
-**Non-Overloaded Functions:**
-```
-3. isPrime(int integertocheck, int primecheckedagainst, int forloopIteration)
-4. run()
-5. primenumberGenerator(ArrayList<Integer> listofIntegers)
+* Clone the repository:
 
 ```
-
-Let's Answer the question: 
-
-**Why have I overloaded the ```arraylistGenerator()``` method?**
-
-Consider the function: 
-
-```
-    public static ArrayList<Integer> arrayListGenerator(int upperbound){
-
-        ArrayList<Integer> listofIntegers = Main.getList();
-        for (int i = 10; i <= upperbound; i++) {
-            listofIntegers.add(i);
-        }
-        return listofIntegers;
-    }
-
-```
-This is overloaded function form:
-
-```
-    public static ArrayList<Integer> arrayListGenerator(int lowerbound,int upperbound){
-
-        ArrayList<Integer> listofIntegers = Main.getList();
-        for (int i = lowerbound; i <= upperbound; i++) {
-            listofIntegers.add(i);
-        }
-        return listofIntegers;
-    }
+git clone [URL of this repo]
 ```
 
-This serves to count the number of primes generated. The former allows this, while the latter does not. 
-
-To generate primes, we need to compare it with the primes that came before it.
-
-If we try to do this within a range of let's say 100 to 200. That's like trying to build a bridge across a river while destroying the section of the bridge previously built.
-
-**Purpose of  ```isPrime(int integertocheck, int primecheckedagainst, int forloopIteration)``` method:**
-
-As the name implies, this method 
--Takes the number passed from the listofIntegers as a parameter.
--Takes the prime it's to be checked against.
--For the For-loop iteration it was placed in.
--Determines wether or not the given number is divisible or not
-
-Pair this method in a for loop and it will check each integer and return a boolean value. 
-
-If it returns true, the integer is checked for the next prime.
-
-If it returns false, the integer is skipped and next integer is checked. 
+* Compile, then run the program:
 
 ```
-In isPrime():
+javac PrimeNumberGenerator.java HCFandLCMfind.java
+```
+* If you want to generate primes:
 
-    public static boolean isPrime(int integertocheck, int primecheckedagainst, int forloopIteration){
-       return integertocheck%primecheckedagainst != 0;//
-    }
+```
+java PrimeNumberGenerator.java 
+```
+* If you want to find HCFs/LCMs:
 
-    //This checks for each integer that is passed, ie wether or not it is divisible by the primes generated thus far.
-    //For this reason, we need to initialize an "listofPrimes" with [2,3,5,7] so that this method has something to compare the numbers with.
+```
+java HCFandLCMfind.java
 ```
 
-**Why ```primenumberGenerator()``` is used in tandem with ```run()```?**
+## License:
 
-Run the program ```PrimeNumberGenerator()```. What do you see?
+>MIT 
 
-Are you asked to type in a number (upperbound)?
+## Reach Out:
 
-That's what the Thread is for.
+[LinkenIn](https://www.linkedin.com/in/mohak-sharma-932342325/) 
 
-It not needed for small numbers like 100 or 1000. But if you want to generate primes till one 
+[GitHub](https://github.com/Mohak-Sharma-dev)
+
+
+
