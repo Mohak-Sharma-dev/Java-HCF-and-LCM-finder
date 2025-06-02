@@ -26,7 +26,7 @@ If you want to run this locally, You will need:
 - Java SE 8+
 - git
 
-** Step-by-Step Installation: **
+**Step-by-Step Installation:**
 
 * Firstly, go to the search tab of the windows task bar and type in "Terminal" or "cmd".
 
@@ -75,7 +75,7 @@ java HCFandLCMfind.java
 
 ## Reach Out:
 
-[LinkenIn](https://www.linkedin.com/in/mohak-sharma-932342325/) 
+[LinkedIn](https://www.linkedin.com/in/mohak-sharma-932342325/) 
 
 [GitHub](https://github.com/Mohak-Sharma-dev)
 
